@@ -22,12 +22,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         public TextView titleProduct;
         public TextView subTitleProduct;
         public TextView validDate;
+        public TextView nameMerchant;
         public ProductViewHolder(View v) {
             super(v);
             imageView = (ImageView)  v.findViewById(R.id.image_product);
             titleProduct = (TextView) v.findViewById(R.id.title_product);
             subTitleProduct = (TextView) v.findViewById(R.id.subtitle_product);
             validDate = (TextView) v.findViewById(R.id.valid_date);
+            nameMerchant = (TextView) v.findViewById(R.id.name_merchant);
         }
     }
 
@@ -57,6 +59,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.titleProduct.setText(product.getTitleProduct());
         holder.subTitleProduct.setText(product.getSubtitleProduct());
         holder.validDate.setText(product.getExpDate());
+        holder.nameMerchant.setText(product.getNameMerchant());
 
     }
 
