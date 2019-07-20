@@ -1,6 +1,8 @@
 package com.example.mandirionline;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +19,7 @@ import com.example.mandirionline.network.ApiClient;
 import com.example.mandirionline.network.ApiService;
 import com.example.mandirionline.network.model.TokenResponse;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,7 +71,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navView.setSelectedItemId(R.id.navigation_home);
-        testRetrofit();
+//        testRetrofit();
     }
 
 
@@ -78,7 +81,9 @@ public class BottomNavigationActivity extends AppCompatActivity {
         call.enqueue(new Callback<TokenResponse>() {
             @Override
             public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
-                Log.d("TAGGER", response.body().getJwt());
+                saveTokenInPreference(response.body().getJwt());
+//                Log.d("TAGGER", response.body().getJwt());
+                testBalance(response.body().getJwt());
             }
 
             @Override
@@ -88,7 +93,32 @@ public class BottomNavigationActivity extends AppCompatActivity {
         });
     }
 
-    void saveTokenInPreference(){
+    void saveTokenInPreference(String token){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("token",token);
+        editor.apply();
+
+    }
+
+    void testBalance(String token){
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        ApiService apiService = ApiClient.getInstance2(this).create(ApiService.class);
+        Call<ResponseBody> call = apiService.getCustomerDetail("1000009024");
+        Log.d("TAG", "testBalance: " + sharedPreferences.getString("token",""));
+        Log.d("TAG", "testBalance2: " + call.request().toString());
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.d("TAGGER", response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.d("ERROR",t.toString());
+            }
+        });
 
     }
 }
