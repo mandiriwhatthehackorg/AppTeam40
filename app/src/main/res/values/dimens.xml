@@ -45,4 +45,7 @@
     <dimen name="image_mission">140dp</dimen>
 
     <dimen name="shadow_product">60dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 </resources>

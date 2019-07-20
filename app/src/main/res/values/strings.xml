@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MandiriOnline</string>
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
@@ -7,4 +8,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_mandiri_mission">MandiriMissionActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string-array name="nominal_array">
+        <item>Tujuan Akhir</item>
+        <item>Tabunan per Periode</item>
+    </string-array>
+
+    <string-array name="weekly_monthly">
+        <item>Mingguan</item>
+        <item>Bulanan</item>
+    </string-array>
 </resources>

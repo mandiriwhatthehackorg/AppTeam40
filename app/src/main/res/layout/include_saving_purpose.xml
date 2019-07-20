@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_nominal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:hint="Amount"
+        app:layout_constraintBottom_toTopOf="@+id/sp_weekly_monthly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_weekly_monthly"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_count"
+        app:layout_constraintStart_toStartOf="@+id/et_nominal"
+        app:layout_constraintTop_toBottomOf="@+id/et_nominal" />
+
+    <EditText
+        android:id="@+id/et_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Berapa Minggu"
+        app:layout_constraintBottom_toTopOf="@+id/tv_savings_per_month"
+        app:layout_constraintStart_toStartOf="@+id/sp_weekly_monthly"
+        app:layout_constraintTop_toBottomOf="@+id/sp_weekly_monthly" />
+
+    <TextView
+        android:id="@+id/tv_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_savings_per_month"
+        app:layout_constraintEnd_toStartOf="@+id/tv_savings_per_month"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_savings_per_month" />
+
+    <TextView
+        android:id="@+id/tv_savings_per_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Savings per Month"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/et_count" />
+</android.support.constraint.ConstraintLayout>
