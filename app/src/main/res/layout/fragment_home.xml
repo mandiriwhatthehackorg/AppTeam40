@@ -194,7 +194,7 @@
             <ImageView
                 android:layout_width="@dimen/icon_button"
                 android:layout_height="@dimen/icon_button"
-                android:src="@drawable/ic_next"
+                android:src="@drawable/ic_edit"
                 android:tint="@color/colorAccent1"
                 app:layout_constraintTop_toTopOf="@id/circle_fav_trx"
                 app:layout_constraintBottom_toBottomOf="@id/circle_fav_trx"

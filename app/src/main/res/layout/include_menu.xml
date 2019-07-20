@@ -208,7 +208,7 @@
         <ImageView
             android:layout_width="@dimen/icon_menu"
             android:layout_height="@dimen/icon_menu"
-            android:src="@drawable/ic_menu_transfer"
+            android:src="@drawable/ic_payment"
             android:tint="@color/brown_400"
             app:layout_constraintTop_toTopOf="@id/circle_5"
             app:layout_constraintBottom_toBottomOf="@id/circle_5"
@@ -296,7 +296,7 @@
         <ImageView
             android:layout_width="@dimen/icon_menu"
             android:layout_height="@dimen/icon_menu"
-            android:src="@drawable/ic_menu_transfer"
+            android:src="@drawable/ic_promo"
             android:tint="@color/blue_600"
             app:layout_constraintTop_toTopOf="@id/circle_7"
             app:layout_constraintBottom_toBottomOf="@id/circle_7"
@@ -340,7 +340,7 @@
         <ImageView
             android:layout_width="@dimen/icon_menu"
             android:layout_height="@dimen/icon_menu"
-            android:src="@drawable/ic_menu_transfer"
+            android:src="@drawable/ic_mission"
             android:tint="@color/green_500"
             app:layout_constraintTop_toTopOf="@id/circle_8"
             app:layout_constraintBottom_toBottomOf="@id/circle_8"
