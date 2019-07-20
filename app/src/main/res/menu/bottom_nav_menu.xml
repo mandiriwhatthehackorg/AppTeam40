@@ -3,22 +3,26 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:icon="@drawable/bottom_nav_home"
+        android:title="@string/title_home"
+        android:checked="true"/>
 
     <item
         android:id="@+id/navigation_product"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="product" />
+        android:icon="@drawable/bottom_nav_product"
+        android:title="product"
+        android:checked="true"/>
 
     <item
         android:id="@+id/navigation_portofolio"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="portofolio" />
+        android:icon="@drawable/bottom_nav_portfolio"
+        android:title="portofolio"
+        android:checked="true"/>
 
     <item
         android:id="@+id/navigation_other"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="other" />
+        android:icon="@drawable/bottom_nav_others"
+        android:title="other"
+        android:checked="true"/>
 
 </menu>
