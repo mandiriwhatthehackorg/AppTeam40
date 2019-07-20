@@ -17,7 +17,11 @@ import com.example.mandirionline.fragment.PortofolioFragment;
 import com.example.mandirionline.fragment.ProductFragment;
 import com.example.mandirionline.network.ApiClient;
 import com.example.mandirionline.network.ApiService;
+import com.example.mandirionline.network.model.ProductResponse;
+import com.example.mandirionline.network.model.ServiceCustomerDetailResponse;
 import com.example.mandirionline.network.model.TokenResponse;
+
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -71,6 +75,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navView.setSelectedItemId(R.id.navigation_home);
+        testProducts();
 //        testRetrofit();
     }
 
@@ -102,20 +107,36 @@ public class BottomNavigationActivity extends AppCompatActivity {
     }
 
     void testBalance(String token){
-
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         ApiService apiService = ApiClient.getInstance2(this).create(ApiService.class);
-        Call<ResponseBody> call = apiService.getCustomerDetail("1000009024");
+        Call<ServiceCustomerDetailResponse> call = apiService.getCustomerDetail("1000009024");
         Log.d("TAG", "testBalance: " + sharedPreferences.getString("token",""));
         Log.d("TAG", "testBalance2: " + call.request().toString());
-        call.enqueue(new Callback<ResponseBody>() {
+        call.enqueue(new Callback<ServiceCustomerDetailResponse>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            public void onResponse(Call<ServiceCustomerDetailResponse> call, Response<ServiceCustomerDetailResponse> response) {
                 Log.d("TAGGER", response.toString());
             }
 
             @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
+            public void onFailure(Call<ServiceCustomerDetailResponse> call, Throwable t) {
+                Log.d("ERROR",t.toString());
+            }
+        });
+
+    }
+
+    void testProducts(){
+        ApiService apiService = ApiClient.getInstance3(this).create(ApiService.class);
+        Call<List<ProductResponse>> call = apiService.getProducts();
+        call.enqueue(new Callback<List<ProductResponse>>() {
+            @Override
+            public void onResponse(Call<List<ProductResponse>> call, Response<List<ProductResponse>> response) {
+                Log.d("SUKSES", response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<List<ProductResponse>> call, Throwable t) {
                 Log.d("ERROR",t.toString());
             }
         });
