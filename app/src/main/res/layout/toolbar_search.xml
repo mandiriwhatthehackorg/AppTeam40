@@ -14,7 +14,7 @@
         android:id="@+id/pp_customer"
         android:layout_width="@dimen/circle_image_profile"
         android:layout_height="@dimen/circle_image_profile"
-        android:src="@drawable/profile_picture_2"
+        android:src="@drawable/profile_picture"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/name_customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name of Customer"
+        android:text="Prasetyo Nugraha"
         android:textStyle="bold"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/font_title"
