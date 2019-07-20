@@ -48,4 +48,6 @@
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="icon_fav_trx">42dp</dimen>
 </resources>

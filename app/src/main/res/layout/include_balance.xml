@@ -91,16 +91,27 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
+    <TextView
+        android:id="@+id/text_tren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tren Saldo Harian"
+        android:textColor="@color/colorWhiteTransparent"
+        android:textSize="@dimen/font_subtitle"
+        android:paddingLeft="@dimen/main_padding"
+        app:layout_constraintTop_toBottomOf="@id/linechart_balance"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
     <LinearLayout
         android:id="@+id/layout_period"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/main_padding"
-        android:layout_marginLeft="@dimen/main_padding"
+        android:layout_marginRight="@dimen/main_padding"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/linechart_balance"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintRight_toRightOf="parent">
 
         <TextView
             android:id="@+id/text_period"
@@ -120,4 +131,5 @@
             android:textSize="@dimen/font_subtitle" />
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

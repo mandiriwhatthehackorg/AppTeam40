@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/main_padding"
+    android:paddingLeft="@dimen/main_margin"
+    android:layout_marginRight="@dimen/main_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/card_trx_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/main_margin"
+        android:background="@drawable/background_line_soft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/card_trx_2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_padding">
+
+            <ImageView
+                android:id="@+id/pp_1"
+                android:layout_width="@dimen/icon_fav_trx"
+                android:layout_height="@dimen/icon_fav_trx"
+                android:src="@drawable/ic_linkaja"
+                android:tint="@color/red_500"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/type_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top-Up"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorGray"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/padding_small"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/pp_1" />
+
+            <TextView
+                android:id="@+id/id_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="081313989554"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_small"
+                app:layout_constraintTop_toBottomOf="@id/type_trx_1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_trx_1">
+
+                <TextView
+                    android:id="@+id/rp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp  "
+                    android:textSize="@dimen/font_extra_small"
+                    android:textColor="@color/colorGray"
+                    app:layout_constraintRight_toLeftOf="@id/amount_trx_1"
+                    app:layout_constraintTop_toTopOf="@id/amount_trx_1"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_trx_1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/amount_trx_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="75.000"
+                    android:textSize="@dimen/font_title"
+                    android:textColor="@color/colorAccent2"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintLeft_toRightOf="@id/rp_1"
+                    tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_trx_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/main_margin"
+        android:background="@drawable/background_line_soft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/card_trx_1"
+        app:layout_constraintRight_toLeftOf="@id/card_trx_3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_padding">
+
+            <ImageView
+                android:id="@+id/pp_1"
+                android:layout_width="@dimen/icon_fav_trx"
+                android:layout_height="@dimen/icon_fav_trx"
+                android:src="@drawable/ic_transfer"
+                android:tint="@color/blue_600"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/type_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transfer"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorGray"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/padding_small"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/pp_1" />
+
+            <TextView
+                android:id="@+id/id_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sambas J. Mahfuzdi"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_small"
+                app:layout_constraintTop_toBottomOf="@id/type_trx_1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_trx_1">
+
+                <TextView
+                    android:id="@+id/rp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp  "
+                    android:textSize="@dimen/font_extra_small"
+                    android:textColor="@color/colorGray"
+                    app:layout_constraintRight_toLeftOf="@id/amount_trx_1"
+                    app:layout_constraintTop_toTopOf="@id/amount_trx_1"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_trx_1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/amount_trx_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="200.000"
+                    android:textSize="@dimen/font_title"
+                    android:textColor="@color/colorAccent2"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintLeft_toRightOf="@id/rp_1"
+                    tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_trx_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/main_margin"
+        android:background="@drawable/background_line_soft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/card_trx_2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_padding">
+
+            <ImageView
+                android:id="@+id/pp_1"
+                android:layout_width="@dimen/icon_fav_trx"
+                android:layout_height="@dimen/icon_fav_trx"
+                android:src="@drawable/ic_data_package"
+                android:tint="@color/orange_700"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/type_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paket Data"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorGray"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/padding_small"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/pp_1" />
+
+            <TextView
+                android:id="@+id/id_trx_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="081313989554"
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_small"
+                app:layout_constraintTop_toBottomOf="@id/type_trx_1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_trx_1">
+
+                <TextView
+                    android:id="@+id/rp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp  "
+                    android:textSize="@dimen/font_extra_small"
+                    android:textColor="@color/colorGray"
+                    app:layout_constraintRight_toLeftOf="@id/amount_trx_1"
+                    app:layout_constraintTop_toTopOf="@id/amount_trx_1"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_trx_1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/amount_trx_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="100.000"
+                    android:textSize="@dimen/font_title"
+                    android:textColor="@color/colorAccent2"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintLeft_toRightOf="@id/rp_1"
+                    tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
