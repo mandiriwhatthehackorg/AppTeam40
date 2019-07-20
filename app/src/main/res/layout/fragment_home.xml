@@ -30,11 +30,83 @@
             android:layout_height="wrap_content">
 
             <include
-                android:id="@+id/toolbar_search"
+                android:id="@+id/inc_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 layout="@layout/include_menu"
                 app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/title_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldoku"
+                android:textSize="@dimen/font_extra_large"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:paddingTop="@dimen/main_padding"
+                android:paddingLeft="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/inc_menu"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/subtitle_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Akumulasi saldo dari pemasukan dan pengeluaran pada periode berjalan."
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorGray"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/title_balance"
+                tools:ignore="MissingConstraints" />
+
+            <include
+                android:id="@+id/inc_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/include_balance"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginLeft="@dimen/main_margin"
+                android:layout_marginRight="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_balance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/title_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Produk"
+                android:textSize="@dimen/font_extra_large"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/margin_large"
+                android:paddingTop="@dimen/main_padding"
+                android:paddingLeft="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/inc_balance"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/subtitle_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rekomendasi produk yang sesuai dengan profil Anda."
+                android:textSize="@dimen/font_subtitle"
+                android:textColor="@color/colorGray"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/title_product"
+                tools:ignore="MissingConstraints" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/main_padding"
+                android:paddingLeft="@dimen/main_margin"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_product"/>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
