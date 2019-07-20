@@ -90,41 +90,41 @@ public class HomeFragment extends Fragment {
     private void generateInitialLineData() {
         ArrayList<Entry> entries = new ArrayList<>();
 
-        entries.add(new Entry(0, 14f));
-        entries.add(new Entry(1, 10f));
-        entries.add(new Entry(2, 8f));
+        entries.add(new Entry(0, 10f));
+        entries.add(new Entry(1, 26f));
+        entries.add(new Entry(2, 19f));
 
-        entries.add(new Entry(3, 16f));
-        entries.add(new Entry(4, 24f));
-        entries.add(new Entry(5, 32f));
+        entries.add(new Entry(3, 12f));
+        entries.add(new Entry(4, 19f));
+        entries.add(new Entry(5, 25f));
 
-        entries.add(new Entry(6, 31f));
-        entries.add(new Entry(7, 18f));
-        entries.add(new Entry(8, 19f));
+        entries.add(new Entry(6, 15f));
+        entries.add(new Entry(7, 26f));
+        entries.add(new Entry(8, 32f));
 
         entries.add(new Entry(9, 21f));
         entries.add(new Entry(10, 12f));
-        entries.add(new Entry(11, 9f));
+        entries.add(new Entry(11, 23f));
 
-        entries.add(new Entry(12, 6f));
+        entries.add(new Entry(12, 17f));
         entries.add(new Entry(13, 11f));
-        entries.add(new Entry(14, 10f));
+        entries.add(new Entry(14, 18f));
 
-        entries.add(new Entry(15, 22f));
+        entries.add(new Entry(15, 29f));
         entries.add(new Entry(16, 16f));
-        entries.add(new Entry(17, 14f));
+        entries.add(new Entry(17, 11f));
 
-        entries.add(new Entry(18, 11f));
-        entries.add(new Entry(19, 14f));
-        entries.add(new Entry(20, 22f));
+        entries.add(new Entry(18, 5f));
+        entries.add(new Entry(19, 19f));
+        entries.add(new Entry(20, 18f));
 
         entries.add(new Entry(21, 29f));
-        entries.add(new Entry(22, 28f));
-        entries.add(new Entry(23, 18f));
+        entries.add(new Entry(22, 22f));
+        entries.add(new Entry(23, 12f));
 
-        entries.add(new Entry(24, 13f));
-        entries.add(new Entry(25, 11f));
-        entries.add(new Entry(26, 16f));
+        entries.add(new Entry(24, 16f));
+        entries.add(new Entry(25, 8f));
+        entries.add(new Entry(26, 19f));
 
         entries.add(new Entry(27, 10f));
         entries.add(new Entry(28, 7f));
@@ -139,9 +139,9 @@ public class HomeFragment extends Fragment {
         //dataSet.setDrawValues(false);
 
         dataSet.setLineWidth(2f);
-        dataSet.setColor(ContextCompat.getColor(getActivity(), R.color.colorAccent1));
+        dataSet.setColor(ContextCompat.getColor(getActivity(), R.color.colorWhite));
         dataSet.setDrawCircles(false);
-        dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+        dataSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         dataSet.setDrawFilled(true);
         Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.gradient_linechart);
         dataSet.setFillDrawable(drawable);
@@ -188,9 +188,9 @@ public class HomeFragment extends Fragment {
         /*chart2.animateX(2000);*/
         linechart_balance.invalidate();
 
-        linechart_balance.getViewPortHandler().setMinimumScaleX(1f);
+        linechart_balance.getViewPortHandler().setMinimumScaleX(3f);
         linechart_balance.getViewPortHandler().setMinimumScaleY(1f);
-        linechart_balance.getViewPortHandler().setMaximumScaleX(1f);
+        linechart_balance.getViewPortHandler().setMaximumScaleX(3f);
         linechart_balance.getViewPortHandler().setMaximumScaleY(1f);
     }
 

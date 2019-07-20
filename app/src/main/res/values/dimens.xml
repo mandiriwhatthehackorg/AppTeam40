@@ -35,6 +35,8 @@
     <dimen name="card_elevation">0dp</dimen>
 
     <dimen name="width_product">180dp</dimen>
+    <dimen name="image_product">160dp</dimen>
+
     <dimen name="line_separator">2dp</dimen>
 
     <dimen name="height_line_chart">140dp</dimen>

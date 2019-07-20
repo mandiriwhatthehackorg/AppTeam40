@@ -40,7 +40,7 @@
                 android:id="@+id/title_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Saldoku"
+                android:text="Saldo Ku"
                 android:textSize="@dimen/font_extra_large"
                 android:textStyle="bold"
                 android:textColor="@color/colorBlack"
@@ -51,7 +51,7 @@
 
             <TextView
                 android:id="@+id/subtitle_balance"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Akumulasi saldo dari pemasukan dan pengeluaran pada periode berjalan."
                 android:textSize="@dimen/font_subtitle"
@@ -59,7 +59,30 @@
                 android:paddingLeft="@dimen/main_margin"
                 android:paddingRight="@dimen/main_margin"
                 app:layout_constraintTop_toBottomOf="@id/title_balance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/circle_next_balance"
                 tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/circle_next_balance"
+                android:layout_width="@dimen/circle_icon_button"
+                android:layout_height="@dimen/circle_icon_button"
+                android:src="@drawable/background_line_soft_circle"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_margin"
+                app:layout_constraintTop_toTopOf="@id/title_balance"
+                app:layout_constraintBottom_toBottomOf="@id/subtitle_balance"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:layout_width="@dimen/icon_button"
+                android:layout_height="@dimen/icon_button"
+                android:src="@drawable/ic_next"
+                android:tint="@color/colorAccent1"
+                app:layout_constraintTop_toTopOf="@id/circle_next_balance"
+                app:layout_constraintBottom_toBottomOf="@id/circle_next_balance"
+                app:layout_constraintLeft_toLeftOf="@id/circle_next_balance"
+                app:layout_constraintRight_toRightOf="@id/circle_next_balance"/>
 
             <include
                 android:id="@+id/inc_balance"
@@ -89,7 +112,7 @@
 
             <TextView
                 android:id="@+id/subtitle_product"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Rekomendasi produk yang sesuai dengan profil Anda."
                 android:textSize="@dimen/font_subtitle"
@@ -97,7 +120,30 @@
                 android:paddingLeft="@dimen/main_margin"
                 android:paddingRight="@dimen/main_margin"
                 app:layout_constraintTop_toBottomOf="@id/title_product"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/circle_next_product"
                 tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/circle_next_product"
+                android:layout_width="@dimen/circle_icon_button"
+                android:layout_height="@dimen/circle_icon_button"
+                android:src="@drawable/background_line_soft_circle"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_margin"
+                app:layout_constraintTop_toTopOf="@id/title_product"
+                app:layout_constraintBottom_toBottomOf="@id/subtitle_product"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:layout_width="@dimen/icon_button"
+                android:layout_height="@dimen/icon_button"
+                android:src="@drawable/ic_next"
+                android:tint="@color/colorAccent1"
+                app:layout_constraintTop_toTopOf="@id/circle_next_product"
+                app:layout_constraintBottom_toBottomOf="@id/circle_next_product"
+                app:layout_constraintLeft_toLeftOf="@id/circle_next_product"
+                app:layout_constraintRight_toRightOf="@id/circle_next_product"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_product"

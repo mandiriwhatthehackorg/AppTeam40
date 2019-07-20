@@ -15,6 +15,8 @@
     <color name="colorSoftAccent1">#12003D79</color>
 
     <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorWhiteTransparent">#80FFFFFF</color>
+    <color name="colorDarkTransparent">#33000000</color>
 
     <!--material color-->
     <color name="red_50">#FFEBEE</color>
