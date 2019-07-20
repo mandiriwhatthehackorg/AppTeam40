@@ -18,6 +18,8 @@
     <color name="colorWhiteTransparent">#80FFFFFF</color>
     <color name="colorDarkTransparent">#33000000</color>
 
+    <color name="colorBackgroundMission">#EBF9FA</color>
+
     <!--material color-->
     <color name="red_50">#FFEBEE</color>
     <color name="red_100">#FFCDD2</color>

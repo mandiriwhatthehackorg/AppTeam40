@@ -230,7 +230,7 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<List<ProductResponse>> call, Response<List<ProductResponse>> response) {
                 List<ProductResponse> responses = response.body();
                 RecyclerView rv = view.findViewById(R.id.recycler_product);
-                rv.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false));
+                rv.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
                 ProductAdapter productAdapter = new ProductAdapter(responses);
                 rv.setAdapter(productAdapter);
                 Log.d("Product Sukses",response.body().toString());

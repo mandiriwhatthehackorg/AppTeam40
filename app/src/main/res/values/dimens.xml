@@ -8,6 +8,7 @@
     <dimen name="margin_extra_large">48dp</dimen>
 
     <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_large">8dp</dimen>
     <dimen name="padding_extra_small">3dp</dimen>
 
     <dimen name="circle_icon_button">36dp</dimen>
@@ -40,4 +41,8 @@
     <dimen name="line_separator">2dp</dimen>
 
     <dimen name="height_line_chart">140dp</dimen>
+
+    <dimen name="image_mission">140dp</dimen>
+
+    <dimen name="shadow_product">60dp</dimen>
 </resources>
