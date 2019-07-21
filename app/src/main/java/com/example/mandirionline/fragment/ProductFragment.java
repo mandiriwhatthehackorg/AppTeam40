@@ -15,8 +15,8 @@ import com.example.mandirionline.R;
 public class ProductFragment extends Fragment {
 
 
-    public ProductFragment() {
-        // Required empty public constructor
+    public ProductFragment newInstance() {
+        return new ProductFragment();
     }
 
 
