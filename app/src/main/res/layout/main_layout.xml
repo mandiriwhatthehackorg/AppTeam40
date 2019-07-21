@@ -5,39 +5,130 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/colorWhite">
+    android:id="@+id/container"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/main_padding"
+    android:paddingBottom="@dimen/main_padding">
 
-    <include
-        android:id="@+id/toolbar_search"
-        android:layout_width="fill_parent"
+    <!--<android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_nav_1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        layout="@layout/toolbar_search"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scroll_view_home"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:overScrollMode="never"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_search"
+        app:layout_constraintRight_toLeftOf="@id/bottom_nav_2"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/circle_notification"
+            android:layout_width="@dimen/circle_icon_button"
+            android:layout_height="@dimen/circle_icon_button"
+            android:src="@drawable/background_line_soft_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
+        <ImageView
+            android:layout_width="@dimen/icon_button"
+            android:layout_height="@dimen/icon_button"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorAccent1"
+            app:layout_constraintTop_toTopOf="@id/circle_notification"
+            app:layout_constraintBottom_toBottomOf="@id/circle_notification"
+            app:layout_constraintLeft_toLeftOf="@id/circle_notification"
+            app:layout_constraintRight_toRightOf="@id/circle_notification"/>
 
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
 
-
-    <ImageView
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_nav_2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/shadow_top"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_search"/>
+        app:layout_constraintLeft_toRightOf="@id/bottom_nav_1"
+        app:layout_constraintRight_toLeftOf="@id/bottom_nav_3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/circle_notification"
+            android:layout_width="@dimen/circle_icon_button"
+            android:layout_height="@dimen/circle_icon_button"
+            android:src="@drawable/background_line_soft_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:layout_width="@dimen/icon_button"
+            android:layout_height="@dimen/icon_button"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorAccent1"
+            app:layout_constraintTop_toTopOf="@id/circle_notification"
+            app:layout_constraintBottom_toBottomOf="@id/circle_notification"
+            app:layout_constraintLeft_toLeftOf="@id/circle_notification"
+            app:layout_constraintRight_toRightOf="@id/circle_notification"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_nav_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bottom_nav_2"
+        app:layout_constraintRight_toLeftOf="@id/bottom_nav_4"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/circle_notification"
+            android:layout_width="@dimen/circle_icon_button"
+            android:layout_height="@dimen/circle_icon_button"
+            android:src="@drawable/background_line_soft_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:layout_width="@dimen/icon_button"
+            android:layout_height="@dimen/icon_button"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorAccent1"
+            app:layout_constraintTop_toTopOf="@id/circle_notification"
+            app:layout_constraintBottom_toBottomOf="@id/circle_notification"
+            app:layout_constraintLeft_toLeftOf="@id/circle_notification"
+            app:layout_constraintRight_toRightOf="@id/circle_notification"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_nav_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bottom_nav_3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/circle_notification"
+            android:layout_width="@dimen/circle_icon_button"
+            android:layout_height="@dimen/circle_icon_button"
+            android:src="@drawable/background_line_soft_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:layout_width="@dimen/icon_button"
+            android:layout_height="@dimen/icon_button"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorAccent1"
+            app:layout_constraintTop_toTopOf="@id/circle_notification"
+            app:layout_constraintBottom_toBottomOf="@id/circle_notification"
+            app:layout_constraintLeft_toLeftOf="@id/circle_notification"
+            app:layout_constraintRight_toRightOf="@id/circle_notification"/>
+
+    </android.support.constraint.ConstraintLayout>-->
+
+
 </android.support.constraint.ConstraintLayout>
