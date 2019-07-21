@@ -12,11 +12,12 @@
         android:id="@+id/et_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/textinput_border"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Title"
+        android:background="@drawable/textinput_border"
+        android:padding="8dp"
+        android:hint="Judul"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,8 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:background="@drawable/textinput_border"
+        android:padding="8dp"
         android:inputType="textPersonName"
-        android:hint="Description"
+        android:hint="Deskripsi"
         app:layout_constraintStart_toStartOf="@+id/et_title"
         app:layout_constraintTop_toBottomOf="@+id/et_title" />
 
