@@ -2,6 +2,7 @@ package com.example.mandirionline.fragment;
 
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.mandirionline.MandiriMissionActivity;
 import com.example.mandirionline.R;
 import com.example.mandirionline.adapter.ProductAdapter;
 import com.example.mandirionline.network.ApiClient;
@@ -65,7 +67,25 @@ public class HomeFragment extends Fragment {
         generateInitialLineData();
         getBalance(view);
         setupProduct(view);
+        setClickListener(view);
         return view;
+    }
+
+    private void setClickListener(View view) {
+        view.findViewById(R.id.inc_mission).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MandiriMissionActivity.class);
+                startActivity(intent);
+            }
+        });
+        view.findViewById(R.id.menu_8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MandiriMissionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setupNama(final View view) {
