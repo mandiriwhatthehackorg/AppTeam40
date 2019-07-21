@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:text="Tanggal Tercapai : \n 4 July 2020"
         android:textSize="24sp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_savings_per_month"
         app:layout_constraintEnd_toStartOf="@+id/tv_savings_per_month"
         app:layout_constraintHorizontal_bias="0.5"
